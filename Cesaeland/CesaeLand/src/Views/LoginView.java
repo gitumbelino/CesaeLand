@@ -19,7 +19,7 @@ public class LoginView {
         int loginOption;
 
         do {
-            System.out.println("\nBem vindo ao CesaeLand \uD83E\uDD1D");
+            System.out.println("\nBem vindo ao CesaeLand");
             System.out.println("1. Área Cliente");
             System.out.println("2. Área Reservada (login)");
             System.out.println("0. Exit \uD83C\uDFC3\uD83D\uDEAA");

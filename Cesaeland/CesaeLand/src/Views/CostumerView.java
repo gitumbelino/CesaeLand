@@ -21,7 +21,7 @@ public class CostumerView {
         int menuOption;
 
         do {
-            System.out.println("\nBem-vindo ao CESAELand. \uD83D\uDED2");
+            System.out.println("\nBem-vindo ao CESAELand.");
             System.out.println("1. As nossas attracções");
             System.out.println("2. As atracções preferidas");
             System.out.println("0. Sair \uD83C\uDFC3\uD83D\uDEAA");
@@ -57,17 +57,13 @@ public class CostumerView {
         System.out.println("+---------------------------------------+----------------+----------------+----------+");
 
         for (Attractions currentAttraction : attractionList) {
-            int minutes = currentAttraction.getDurationSeconds() / 60;
-            int seconds = currentAttraction.getDurationSeconds() % 60;
-            String duration = String.format("%02d:%02d", minutes, seconds);
-
-            String attractionName = currentAttraction.getAttraction();
-            if (attractionName.length() > 37) {
-                attractionName = attractionName.substring(0, 34) + "...";
-            }
+            // Formatar a duração no formato min:seg
+            String duration = String.format("%02d:%02d",
+                    currentAttraction.getDurationSeconds() / 60,
+                    currentAttraction.getDurationSeconds() % 60);
 
             System.out.printf("| %-37s | %13.2f€ | %13.2f€ | %8s |\n",
-                    attractionName,
+                    currentAttraction.getAttraction(),
                     currentAttraction.getPriceAdult(),
                     currentAttraction.getPriceChildren(),
                     duration);
@@ -78,6 +74,7 @@ public class CostumerView {
 
 
         private void printFavouriteAttractions () {
+        System.out.println("Opção não desenvolvida, volte mais tarde :D");
         }
 
 

@@ -1,6 +1,7 @@
 package Views;
 
 import Controllers.AdminController;
+import Domain.Attractions;
 
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -21,8 +22,6 @@ public class AdminView {
         int menuOption;
 
         do {
-
-
             System.out.println("\n Bem vindo Senhor Administrador!");
             System.out.println("1. Consultar o total de todas as vendas.");
             System.out.println("2. Consultar o total de lucro.");
@@ -40,97 +39,61 @@ public class AdminView {
             menuOption = input.nextInt();
 
             switch (menuOption) {
-                case 1: // Most Sold Product (By Units)
+                case 1:
+                    System.out.println("Opção não desenvolvida, volte mais tarde :D");
                     break;
 
-                case 2: // Most Sold Product (By Value)
+                case 2:
+
+                    System.out.println("Opção não desenvolvida, volte mais tarde :D");
                     break;
 
-                case 3: // Best Sale (By Units)
+                case 3:
+
+                    System.out.println("Opção não desenvolvida, volte mais tarde :D");
                     break;
 
-                case 4: // Best Sale (By Value)
+                case 4:
+                    System.out.println("Opção não desenvolvida, volte mais tarde :D");
                     break;
 
-                case 5: // Total Sales
-//                    double totalSales = this.adminController.getTotalSales();
-//
-//                    System.out.println("********** \uD83D\uDCB0 Total Sales \uD83D\uDCB0 **********");
-//                    System.out.println(totalSales + " €");
+                case 5:
 
+                    System.out.println("Opção não desenvolvida, volte mais tarde :D");
                     break;
 
-                case 6: // Average Sales
+                case 6:
+
+                    System.out.println("Opção não desenvolvida, volte mais tarde :D");
                     break;
 
-                case 7: // Coffee Time
-                    coffeeTime();
+                case 7:
+
+                    System.out.println("Opção não desenvolvida, volte mais tarde :D");
                     break;
 
-                case 0: // Exit
+                case 8:
+
+                    System.out.println("Opção não desenvolvida, volte mais tarde :D");
                     break;
 
-                default: // Invalid Option
+                case 9:
+                    Attractions bestCostBenefitAttraction = this.adminController.getpriceVsTime();
+                    System.out.println("A atração com melhor relação/preço é " + bestCostBenefitAttraction.getAttraction() + ":");
+                    System.out.println((bestCostBenefitAttraction.getDurationSeconds() / bestCostBenefitAttraction.getPriceAdult()) + "s/€");
+                    break;
+
+                case 10:
+                    System.out.println("Opção não desenvolvida, volte mais tarde. :D");
+                    break;
+
+                case 0:
+                    break;
+
+                default:
                     System.out.println("\uD83D\uDEA8 Invalid Option \uD83D\uDEA8");
             }
         } while (menuOption != 0);
     }
 
-    private void coffeeTime() throws InterruptedException {
-        System.out.println("Awaiting Coffee");
-        System.out.println("₊˚.\uD83C\uDFA7 ✩｡ \uD83E\uDD0E");
-        System.out.println("_________________________");
-        System.out.print("|");
-        sleep(300);
-        System.out.print("|");
-        sleep(300);
-        System.out.print("|");
-        sleep(300);
-        System.out.print("|");
-        sleep(300);
-        System.out.print("|");
-        sleep(300);
-        System.out.print("|");
-        sleep(300);
-        System.out.print("|");
-        sleep(300);
-        System.out.print("|");
-        sleep(300);
-        System.out.print("|");
-        sleep(300);
-        System.out.print("|");
-        sleep(300);
-        System.out.print("|");
-        sleep(300);
-        System.out.print("|");
-        sleep(300);
-        System.out.print("|");
-        sleep(300);
-        System.out.print("|");
-        sleep(300);
-        System.out.print("|");
-        sleep(300);
-        System.out.print("|");
-        sleep(300);
-        System.out.print("|");
-        sleep(300);
-        System.out.print("|");
-        sleep(300);
-        System.out.print("|");
-        sleep(300);
-        System.out.print("|");
-        sleep(300);
-        System.out.print("|");
-        sleep(300);
-        System.out.print("|");
-        sleep(300);
-        System.out.print("|");
-        sleep(300);
-        System.out.print("|");
-        sleep(300);
-        System.out.print("|");
-
-        System.out.println("\n\n☕");
-
-    }
 }
