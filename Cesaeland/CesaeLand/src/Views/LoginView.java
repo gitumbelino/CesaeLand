@@ -22,8 +22,8 @@ public class LoginView {
             System.out.println("\nBem vindo ao CesaeLand");
             System.out.println("1. Área Cliente");
             System.out.println("2. Área Reservada (login)");
-            System.out.println("0. Exit \uD83C\uDFC3\uD83D\uDEAA");
-            System.out.print("Choose: ");
+            System.out.println("0. Sair \uD83C\uDFC3\uD83D\uDEAA");
+            System.out.print("Escolha: ");
 
             loginOption = input.nextInt();
 

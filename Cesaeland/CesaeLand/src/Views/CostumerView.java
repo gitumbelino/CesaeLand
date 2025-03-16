@@ -48,6 +48,10 @@ public class CostumerView {
         } while (menuOption != 0);
     }
 
+
+
+    //Consultar Atrações Disponíveis: Deve imprimir em forma de tabela, as atrações, preços dos bilhetes e duração da
+    //atração no formato min:seg.
     private void showAttractions() {
 
         ArrayList<Attractions> attractionList = this.customerController.getAttractionsList();
@@ -56,8 +60,9 @@ public class CostumerView {
         System.out.println("| Atração                               | Preço Adulto   | Preço Criança  | Duração  |");
         System.out.println("+---------------------------------------+----------------+----------------+----------+");
 
+
         for (Attractions currentAttraction : attractionList) {
-            // Formatar a duração no formato min:seg
+
             String duration = String.format("%02d:%02d",
                     currentAttraction.getDurationSeconds() / 60,
                     currentAttraction.getDurationSeconds() % 60);

@@ -15,6 +15,7 @@ public class CSVReader {
 
 
 
+
     public static ArrayList<Users> readUserFileToArray(String filePath) throws FileNotFoundException {
 
 
@@ -45,8 +46,6 @@ public class CSVReader {
             // Adicionar novo User ao Array
             usersArrayRead.add(newUser);
         }
-
-
 
         return usersArrayRead;
     }

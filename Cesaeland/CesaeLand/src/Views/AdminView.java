@@ -6,8 +6,6 @@ import Domain.Attractions;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-import static java.lang.Thread.sleep;
-
 public class AdminView {
 
     AdminController adminController;
@@ -33,8 +31,8 @@ public class AdminView {
             System.out.println("8. Consultar a atração menos lucrativa (considere o período total).");
             System.out.println("9. Consultar a atração com melhor preço/tempo. #####(Função que escolhi deenvolver)######.");
             System.out.println("10. Adicionar novo login");
-            System.out.println("0. Exit \uD83C\uDFC3\uD83D\uDEAA");
-            System.out.print("Choose: ");
+            System.out.println("0. Sair \uD83C\uDFC3\uD83D\uDEAA");
+            System.out.print("Escolha: ");
 
             menuOption = input.nextInt();
 
@@ -79,7 +77,8 @@ public class AdminView {
 
                 case 9:
                     Attractions bestCostBenefitAttraction = this.adminController.getpriceVsTime();
-                    System.out.println("A atração com melhor relação/preço é " + bestCostBenefitAttraction.getAttraction() + ":");
+                    System.out.println("A atração com melhor relação/preço é: ");
+                    System.out.println(bestCostBenefitAttraction.getAttraction());
                     System.out.println((bestCostBenefitAttraction.getDurationSeconds() / bestCostBenefitAttraction.getPriceAdult()) + "s/€");
                     break;
 
@@ -91,7 +90,7 @@ public class AdminView {
                     break;
 
                 default:
-                    System.out.println("\uD83D\uDEA8 Invalid Option \uD83D\uDEA8");
+                    System.out.println("\uD83D\uDEA8  Opção inválida \uD83D\uDEA8");
             }
         } while (menuOption != 0);
     }

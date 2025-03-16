@@ -19,7 +19,7 @@ public class LoginController {
 
         for(Users currentUser: this.usersRepository.getUsersList()){
             if(usernameInput.equals(currentUser.getUserName()) && passwordInput.equals(currentUser.getPassword())){
-                // Valid Access
+
                 accessType= currentUser.getLoginType();
             }
         }
